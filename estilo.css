@@ -7,23 +7,23 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  background-color: #111; /* Fondo negro elegante */
+  color: #f4f4f4; /* Texto claro */
 }
 
 /* Barra de navegación */
-.navbar {
+nav {
+  background-color: #000; /* Fondo negro */
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
-  padding: 15px 40px;
 }
 
-.logo {
+nav h2 {
+  color: #e60000; /* Rojo fuerte para el logo */
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffcc00;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -40,7 +40,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ffcc00;
+  color: #e60000; /* Rojo al pasar el mouse */
 }
 
 /* Sección principal */
@@ -49,22 +49,27 @@ body {
   padding: 80px 20px;
   background: url('gym-bg.jpg') no-repeat center/cover;
   color: #fff;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  color: #e60000; /* Título rojo para destacar */
 }
 
 .hero p {
   font-size: 1.2rem;
+  color: #ddd;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background-color: #111;
-  color: #aaa;
+  background-color: #000;
+  color: #888;
   padding: 15px 0;
   font-size: 0.9rem;
+  border-top: 2px solid #e60000; /* Línea roja arriba del footer */
 }
