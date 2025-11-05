@@ -271,3 +271,92 @@
         grid-template-columns: 1fr;
       }
     }
+
+.ejercicio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+/* === ENTRENADORES SECTION === */
+.entrenadores-section {
+  padding: 4rem 5%;
+  background: #f5f7fa;
+}
+
+.entrenadores-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.entrenadores-section > p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.entrenadores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.entrenador-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border-top: 5px solid #667eea;
+}
+
+.entrenador-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.entrenador-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.entrenador-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.especialidad {
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive para Entrenadores */
+@media (max-width: 768px) {
+  .entrenador-img {
+    height: 200px;
+  }
+
+  .entrenador-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+

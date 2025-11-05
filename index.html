@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gimnasio FitLife</title>
-  <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerFit Gym</title>
+  <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
-  <!-- Barra de navegación -->
+
+  <!-- HEADER / NAVBAR -->
   <header>
     <nav class="navbar">
-      <div class="logo">FitLife</div>
+      <div class="logo">PowerFit</div>
       <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="./index.html">Inicio</a></li>
         <li><a href="./planes.html">Planes</a></li>
-        <li><a href="#">Clases</a></li>
-        <li><a href="#">Entrenadores</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="./contactos.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Contenido de la página -->
-  <main>
-    <section class="hero">
-      <h1>Bienvenido a FitLife</h1>
-      <p>El gimnasio donde alcanzarás tu mejor versión.</p>
-    </section>
-  </main>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a PowerFit Gym</h1>
+    <p>Entrená, superate y alcanzá tus metas con nosotros.</p>
+  </section>
 
+  <!-- PLANES -->
+  <section id="planes" class="planes-section">
+    <h2>Nuestros Planes</h2>
+    <p>Elegí el plan que mejor se adapte a tus necesidades y objetivos.</p>
+
+    <div class="planes-container">
+
+      <!-- PLAN BÁSICO -->
+      <div class="plan-card">
+        <div class="plan-nombre">Plan Básico</div>
+        <div class="plan-precio">$10.000 <span>/mes</span></div>
+        <p class="plan-descripcion">Perfecto para quienes recién comienzan en el gimnasio.</p>
+        <ul class="plan-beneficios">
+          <li>Acceso libre al gimnasio</li>
+          <li>Rutina general de entrenamiento</li>
+          <li>Asesoramiento inicial</li>
+        </ul>
+        <button class="plan-btn">Elegir Plan</button>
+      </div>
+
+      <!-- PLAN PREMIUM -->
+      <div class="plan-card destacado">
+        <div class="plan-nombre">Plan Premium</div>
+        <div class="plan-precio">$18.000 <span>/mes</span></div>
+        <p class="plan-descripcion">Incluye seguimiento personalizado y clases grupales.</p>
+        <ul class="plan-beneficios">
+          <li>Clases ilimitadas</li>
+          <li>Entrenador personal</li>
+          <li>Evaluaciones mensuales</li>
+        </ul>
+        <button class="plan-btn">Elegir Plan</button>
+      </div>
+
+      <!-- PLAN FULL -->
+      <div class="plan-card">
+        <div class="plan-nombre">Plan Full</div>
+        <div class="plan-precio">$22.000 <span>/mes</span></div>
+        <p class="plan-descripcion">La experiencia más completa para atletas exigentes.</p>
+        <ul class="plan-beneficios">
+          <li>Acceso total a áreas VIP</li>
+          <li>Seguimiento nutricional</li>
+          <li>Sesiones de fisioterapia</li>
+        </ul>
+        <button class="plan-btn">Elegir Plan</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="planes-section">
+    <h2>Contacto</h2>
+    <p>¿Tenés dudas? Escribinos o vení a visitarnos.</p>
+
+    <div class="planes-container">
+
+      <div class="plan-card">
+        <h3>📍 Ubicación</h3>
+        <p>Av. Siempre Viva 1234, Buenos Aires</p>
+      </div>
+
+      <div class="plan-card">
+        <h3>📞 Teléfono</h3>
+        <p>+54 11 5555-5555</p>
+      </div>
+
+      <div class="plan-card">
+        <h3>📧 Email</h3>
+        <p>contacto@powerfitgym.com</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Gimnasio FitLife. Todos los derechos reservados.</p>
+    <p>© 2025 PowerFit Gym — Todos los derechos reservados</p>
   </footer>
+
 </body>
 </html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Gimnasio FitLife</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f7fa;
+    }
+
+    /* Estilos del Navbar */
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero-contacto {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero-contacto h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-contacto p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    /* Sección de Contacto */
+    .contacto-section {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contacto-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    /* Información de contacto */
+    .contacto-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .info-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-left: 5px solid #667eea;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+    }
+
+    .info-item h3 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-item p {
+      color: #666;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* Formulario */
+    .contacto-form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .contacto-form h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .contacto-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+      padding: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .contacto-form input:focus,
+    .contacto-form textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .contacto-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-btn {
+      padding: 1.2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0.5rem;
+    }
+
+    .form-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Mapa o información adicional */
+    .info-adicional {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .info-adicional h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .info-adicional p {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .redes-sociales {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .red-social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+    }
+
+    .red-social:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+
+      .hero-contacto h1 {
+        font-size: 2rem;
+      }
+
+      .hero-contacto p {
+        font-size: 1rem;
+      }
+
+      .contacto-container {
+        grid-template-columns: 1fr;
+      }
+
+      .info-item:hover {
+        transform: translateX(5px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">FitLife</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#planes">Planes</a></li>
+        <li><a href="#">Clases</a></li>
+        <li><a href="#">Entrenadores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-contacto">
+    <h1>Contactanos</h1>
+    <p>Estamos para ayudarte a comenzar tu transformación</p>
+  </section>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="contacto-section">
+      <div class="contacto-container">
+        
+        <!-- Información de contacto -->
+        <div class="contacto-info">
+          <div class="info-item">
+            <h3>📍 Ubicación</h3>
+            <p>Av. Principal 1234<br>Concepción, Tucumán<br>Argentina</p>
+          </div>
+          
+          <div class="info-item">
+            <h3>📞 Teléfono</h3>
+            <p>+54 9 381 123-4567<br>
+            Lunes a Viernes: 8:00 - 20:00</p>
+          </div>
+          
+          <div class="info-item">
+            <h3>📧 Email</h3>
+            <p>info@fitlife.com.ar<br>
+            consultas@fitlife.com.ar</p>
+          </div>
+          
+          <div class="info-item">
+            <h3>⏰ Horarios de Atención</h3>
+            <p>Lunes a Viernes: 6:00 - 23:00<br>
+            Sábados: 8:00 - 20:00<br>
+            Domingos: 9:00 - 14:00</p>
+          </div>
+        </div>
+        
+        <!-- Formulario de contacto -->
+        <div class="contacto-form">
+          <h2>Envianos tu consulta</h2>
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+54 9 381 123-4567">
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+            </div>
+            
+            <button type="submit" class="form-btn">Enviar Mensaje</button>
+          </form>
+        </div>
+        
+      </div>
+
+      <!-- Información adicional -->
+      <div class="info-adicional">
+        <h2>Visitanos o seguinos en redes</h2>
+        <p>Te esperamos en nuestras instalaciones para que conozcas todo lo que FitLife tiene para ofrecerte.<br>
+        También podés seguirnos en nuestras redes sociales para estar al día con nuestras novedades.</p>
+        
+        <div class="redes-sociales">
+          <a href="#" class="red-social" title="Facebook">f</a>
+          <a href="#" class="red-social" title="Instagram">📷</a>
+          <a href="#" class="red-social" title="WhatsApp">💬</a>
+          <a href="#" class="red-social" title="YouTube">▶</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gimnasio FitLife. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
